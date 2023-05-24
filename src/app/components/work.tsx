@@ -7,6 +7,7 @@ import work3 from "@/app/images/work3.jpg";
 import work4 from "@/app/images/work4.jpg";
 import work5 from "@/app/images/work5.jpg";
 import work6 from "@/app/images/work6.png";
+import Link from 'next/link';
 
 
 const Work = () => {
@@ -17,7 +18,7 @@ const Work = () => {
         <div className='grid border border-black w-[90%] ml-7  grid-cols-1 md:grid-cols-3 gap-4'>
             <div className=' relative group'>
                 <Image src={work1} alt="work1"/>
-                <div className=' bg-[#000000bd] absolute w-[100%] h-[100%] top-0 opacity-0 transition duration-500 group-hover:opacity-100 grid place-items-center text-white'><a href="https://illdy-mamoon.netlify.app/">Clone Website</a></div>
+                <div className=' bg-[#000000bd] absolute w-[100%] h-[100%] top-0 opacity-0 transition duration-500 group-hover:opacity-100 grid place-items-center text-white'><Link href="https://illdy-mamoon.netlify.app/">Clone Website</Link></div>
             </div>
 
             <div className=' relative group'>
@@ -42,7 +43,7 @@ const Work = () => {
 
             <div className=' relative group'>
                 <Image src={work6} alt="work6"/>
-                <div className=' bg-[#000000bd] absolute w-[100%] h-[100%] top-0 opacity-0 transition duration-500 group-hover:opacity-100 grid place-items-center text-white'><a href="https://mole-game-mamoon.netlify.app/">Game</a></div>
+                <div className=' bg-[#000000bd] absolute w-[100%] h-[100%] top-0 opacity-0 transition duration-500 group-hover:opacity-100 grid place-items-center text-white'><Link href="https://mole-game-mamoon.netlify.app/">Game</Link></div>
             </div>
         </div>
     </section>

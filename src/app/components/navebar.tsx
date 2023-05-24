@@ -65,29 +65,28 @@ const Navebar = () => {
   };
 
   return (
-    <div className="bg-white flex w-full mx-auto fixed top-0 shadow-2xl justify-center    text-[17px] px-4 z-10">
-      <div>
+    <div className="bg-white flex w-full  fixed top-0 shadow-2xl justify-center text-[17px] px-4 z-10">
+      <div className="w-full md:flex md:justify-center md:items-center">
         <div className="hidden md:flex space-x-5 md:py-5 mx-4 overflow-x-auto ">
           {Nav_Items.map((item, idx) => (
-            <a
+            <Link
               key={idx}
               className="hover:cursor-pointer hover:scale-105 hover:text-slate-600"
-              onClick={() => handleScroll(item.id)}
-            >
+              onClick={() => handleScroll(item.id)} href={""}            >
               {item.label}
-            </a>
+            </Link>
           ))}
-          <a
+          <Link
             href="/cv.pdf"
             className="hidden md:flex border border-[#ff4d41] px-4 py-1 text-[#ff4d41] rounded-[5px] items-center gap-2 hover:bg-[#ff4d41] hover:text-white transition duration-200"
             download={true}
           >
             Download CV
             <BsDownload />
-          </a>
+          </Link>
         </div>
 
-        <div className="  md:hidden text-[24px] flex justify-center items-end py-2 ml-[370px] sm:ml-[650px]">
+        <div className="md:hidden text-[24px] flex justify-end items-end py-2">
           <FiMenu onClick={handlenav} />
         </div>
       </div>
@@ -115,22 +114,21 @@ const Navebar = () => {
           {/* nav buttons */}
           <div className=" md:hidden flex flex-col space-y-6 mt-[50px]  left-0">
             {Nav_Items.map((item, idx) => (
-              <a
+              <Link
                 key={idx}
                 className="hover:cursor-pointer hover:text-slate-600"
-                onClick={() => handleScroll(item.id)}
-              >
+                onClick={() => handleScroll(item.id)} href={""}              >
                 {item.label}
-              </a>
+              </Link>
             ))}
-            <a
+            <Link
               href="/cv.pdf"
               className=" flex w-[170px] md:flex border border-[#ff4d41] px-4 py-1 text-[#ff4d41] rounded-[5px] items-center gap-2 hover:bg-[#ff4d41] hover:text-white transition duration-200"
               download={true}
             >
               Download CV
               <BsDownload />
-            </a>
+            </Link>
           </div>
           {/* social media links */}
           <div className=" md:hidden justify-between w-full mt-8 border flex rounded-full shadow-lg shadow-gray-400 p-3 ">

@@ -7,6 +7,7 @@ import Link from "next/link";
 
 function About() {
   return (
+    <>
     <section id="About" className="mx-auto py-8 px-4 ">
       <div className="ml-8">
       <Heading title="About me" />
@@ -19,18 +20,19 @@ function About() {
         <div className="flex flex-col items-center "> 
           <div className=" max-w-[550px] ml-8 mt-8">
             <h1 className=" flex justify-center my-4 font-bold">Muhammad Mamoon</h1>
-            <p className=" text-slate-600 mr-6">I am a front-end developer and MIS officer at Artistic Millner, currently studying BSCS at Ilma University. I am also learning about blockchain through PIAIC. With a passion for creating visually appealing user interfaces, I aim to leverage blockchain technology's potential to revolutionize various industries. I have a strong foundation in web development and a dedication to continuous learning. Let's connect and collaborate to create impactful digital experiences.</p>
+            <p className=" text-slate-600 mr-6">I am a front-end developer and MIS officer at Artistic Millner, currently studying BSCS at Ilma University. I am also learning about blockchain through PIAIC. With a passion for creating visually appealing user interfaces, I aim to leverage blockchain technology&apos;s potential to revolutionize various industries. I have a strong foundation in web development and a dedication to continuous learning. Let&apos;s connect and collaborate to create impactful digital experiences.</p>
           </div>
          
-          <Link href="/">
-          
-          <Button link="#" text="Contact Me"/>
         
-          </Link>
+          
+          <Button link="Contact" text="Contact Me"/>
+        
+          
          
         </div>
       </div>
     </section>
+    </>
   );
 }
 

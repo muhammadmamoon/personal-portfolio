@@ -29,14 +29,16 @@ const Whatido =()=> {
     <div>
     <Heading title="What I Do"/>    
     </div> 
-<div className=' flex flex-col items-center justify-center md:flex-row gap-8 md:mr-8'>
+<div className=' flex flex-col items-center justify-center md:flex-row gap-8 md:mr-8' >
   
-
          {whatIdoData.map((item,idx)=>{
-            return <div className=' shadow-lg border border-cyan-700 flex ml-9 w-[300px] flex-col  py-6 px-8 bg-[#ff4D41] text-white hover:shadow-gray-500 hover:cursor-pointer'>
-            <h2 className=' text-black text-xl mb-1'>{item.heading}</h2>
-            <p>{item.description}</p>
-        </div>
+            return (
+              <div className=' shadow-lg border border-cyan-700 flex ml-9 w-[300px] flex-col  py-6 px-8 bg-[#ff4D41] text-white hover:shadow-gray-500 hover:cursor-pointer' key={idx}>
+              <div className=' text-black text-xl mb-1'>{item.heading}</div>
+              <div>{item.description}</div>
+          </div>
+            )
+          
           })}
           
 </div>
