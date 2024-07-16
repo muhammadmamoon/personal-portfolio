@@ -29,12 +29,40 @@ const getSkilldata: Array<skilldata> = [
     percentage:'w-[75%]'
   },
   {
+    heading: "React Js",
+    percentage:'w-[70%]'
+  },
+  {
     heading: "Next JS 13",
     percentage:'w-[75%]'
   },
   {
-    heading: "GitHub",
-    percentage:'w-[40%]'
+    heading: "Node Js",
+    percentage:'w-[70%]'
+  },
+  {
+    heading: "Express",
+    percentage:'w-[60%]'
+  },
+  {
+    heading: "MySQL",
+    percentage:'w-[85%]'
+  },
+  {
+    heading: "MongoDB",
+    percentage:'w-[60%]'
+  },
+  {
+    heading: "Crystal Report",
+    percentage:'w-[85%]'
+  },
+  {
+    heading: "SAP Business One",
+    percentage:'w-[75%]'
+  },
+  {
+    heading: "Git/GitHub",
+    percentage:'w-[60%]'
   },
 ];
 
