@@ -27,7 +27,7 @@ function Hero() {
         <div className="text-white max-w-[550px] flex flex-col items-start gap-6 lg:ml-8">
           <div className="text-center lg:text-left">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-              I'M Muhammad Mamoon
+              I&#39;M Muhammad Mamoon
             </h1>
             <div className="text-xl sm:text-2xl md:text-3xl mt-3">
               <Typewriter

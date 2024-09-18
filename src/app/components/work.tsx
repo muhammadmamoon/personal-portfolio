@@ -16,9 +16,9 @@ import work8 from "@/app/images/work8.png";
 const workData = [
   {
     src: work1,
-    alt: 'Illdy Clone Website',
-    link: 'https://illdy-mamoon.netlify.app/',
-    title: 'Clone Website'
+    alt: "Illdy Clone Website",
+    link: "https://illdy-mamoon.netlify.app/",
+    title: "Clone Website"
   },
   {
     src: work2,
@@ -51,7 +51,7 @@ const workData = [
     title: 'Game'
   },{
     src: work7,
-    alt: 'IT Consultant & Service Provider',
+    alt: 'IT Consultant &#39;Service Provider',
     link: 'https://iblaaqisol.vercel.app/',
     title: 'IBLAAQISOL'
   },
