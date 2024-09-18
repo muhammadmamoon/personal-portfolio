@@ -47,7 +47,7 @@ function Hero() {
             React.js, Next.js, Tailwind CSS, TypeScript, and Bootstrap, I ensure
             seamless user experiences and robust functionality. Additionally, I
             specialize in backend technologies like Node.js, Express.js, and
-            database management using MongoDB, MySQL, and PostgreSQL. Let’s
+            database management using MongoDB, MySQL, and PostgreSQL. Let&apos;s
             collaborate to bring your digital vision and business solutions to
             life!
           </p>
