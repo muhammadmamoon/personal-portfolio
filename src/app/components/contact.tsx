@@ -1,24 +1,57 @@
 import React from "react";
 import Heading from "./heading";
-import Button from "../button";
-import { send } from "process";
 
 const Contact = () => {
   return (
-    <section id="Contact" className="mx-auto flex flex-col items-center py-10 px-4">
+    <section id="Contact" className="mx-auto py-12 px-4 sm:px-8 lg:px-16 flex flex-col items-center">
       <Heading title="Contact Me" />
 
-      <form action="https://formspree.io/f/xrgvvzon" method="POST" className=" flex flex-col w-[300px] sm:w-[500px] ml-8 mr-8">
-        <div className=" flex flex-col gap-4">
-            <input type="text" name="name"  placeholder="Full Name" className=" border-gray-400 border rounded-[5px] px-3 py-2 " required autoComplete="off"/>
-            <input type="Email" name="email"  placeholder="Email" className=" outline-[#ff4D41] border-gray-400 border rounded-[5px] px-3 py-2 " required autoComplete="off" />
-            <input type="text" name="number"  placeholder="Phone" className=" border-gray-400 border rounded-[5px] px-3 py-2 " required autoComplete="off"/>
-        <textarea placeholder="Message" name="message" rows={6} className="outline-[#ff4D41] border-gray-400 border rounded-[5px] px-3 py-2" required autoComplete="off"></textarea>
+      <form
+        action="https://formspree.io/f/xrgvvzon"
+        method="POST"
+        className="flex flex-col w-full max-w-md sm:max-w-lg bg-white shadow-lg rounded-lg p-6"
+      >
+        <div className="flex flex-col gap-4">
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            className="border-gray-300 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff4D41] transition duration-200"
+            required
+            autoComplete="off"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            className="border-gray-300 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff4D41] transition duration-200"
+            required
+            autoComplete="off"
+          />
+          <input
+            type="tel"
+            name="number"
+            placeholder="Phone"
+            className="border-gray-300 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff4D41] transition duration-200"
+            required
+            autoComplete="off"
+          />
+          <textarea
+            placeholder="Message"
+            name="message"
+            rows={6}
+            className="border-gray-300 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff4D41] transition duration-200"
+            required
+            autoComplete="off"
+          ></textarea>
         </div>
-        
-        <div className=" flex justify-center">
-          
-        <input type="submit" value="Submit" className="text-[#ff4d41] py-2 px-4 hover:bg-[#ff4d41] rounded inline-block mt-10 font-medium border border-[#ff4d41] hover:text-white hover: bg-transparent   transition duration-200" />
+
+        <div className="flex justify-center mt-6">
+          <input
+            type="submit"
+            value="Submit"
+            className="bg-[#ff4D41] text-white py-2 px-6 rounded-lg font-medium border border-[#ff4D41] hover:bg-transparent hover:text-[#ff4D41] transition duration-200"
+          />
         </div>
       </form>
     </section>
@@ -26,4 +59,3 @@ const Contact = () => {
 };
 
 export default Contact;
- 

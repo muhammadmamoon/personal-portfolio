@@ -1,6 +1,6 @@
-import React from 'react'
-import Heading from './heading'
-import Image from 'next/image'
+import React from 'react';
+import Heading from './heading';
+import Image from 'next/image';
 import work1 from "@/app/images/work1.png";
 import work2 from "@/app/images/work2.jpg";
 import work3 from "@/app/images/work3.jpg";
@@ -9,45 +9,69 @@ import work5 from "@/app/images/work5.jpg";
 import work6 from "@/app/images/work6.png";
 import Link from 'next/link';
 
-
 const Work = () => {
   return (
-    <section id='Project' className='mx-auto py-8 px-4'>
-        <Heading title="Creative Works"/>
+    <section id="Project" className="mx-auto py-12 px-4 md:px-8 lg:px-16">
+      {/* Heading */}
+      <Heading title="Creative Works" />
 
-        <div className='grid border border-black w-[90%] ml-7  grid-cols-1 md:grid-cols-3 gap-4'>
-            <div className=' relative group'>
-                <Image src={work1} alt="work1"/>
-                <div className=' bg-[#000000bd] absolute w-[100%] h-[100%] top-0 opacity-0 transition duration-500 group-hover:opacity-100 grid place-items-center text-white'><Link href="https://illdy-mamoon.netlify.app/">Clone Website</Link></div>
-            </div>
+      {/* Work Gallery */}
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[{
+          src: work1,
+          alt: 'Illdy Clone Website',
+          link: 'https://illdy-mamoon.netlify.app/',
+          title: 'Clone Website'
+        }, {
+          src: work2,
+          alt: 'Countdown Timer App',
+          link: 'https://count-down-timer-mamoon.netlify.app',
+          title: 'Countdown Timer'
+        }, {
+          src: work3,
+          alt: 'Voice-Inator Project',
+          link: 'https://voice-inator-mamoon.netlify.app',
+          title: 'Voice-Inator'
+        }, {
+          src: work4,
+          alt: 'Music Player App',
+          link: 'https://remix-player.netlify.app',
+          title: 'Music Player'
+        }, {
+          src: work5,
+          alt: 'Wall Clock App',
+          link: 'https://clock02.netlify.app/',
+          title: 'Wall Clock'
+        }, {
+          src: work6,
+          alt: 'Mole Game Project',
+          link: 'https://mole-game-mamoon.netlify.app/',
+          title: 'Game'
+        }].map((work, index) => (
+          <div key={index} className="relative group overflow-hidden rounded-lg shadow-lg">
+            {/* Image */}
+            <Image
+              src={work.src}
+              alt={work.alt}
+              className="transition-transform duration-500 transform group-hover:scale-105"
+              layout="responsive"
+              objectFit="cover"
+              quality={75}
+            />
 
-            <div className=' relative group'>
-                <Image src={work2} alt="work2"/>
-                <div className=' bg-[#000000bd] absolute w-[100%] h-[100%] top-0 opacity-0 transition duration-500 group-hover:opacity-100 grid place-items-center text-white'><a href="https://count-down-timer-mamoon.netlify.app">Count Down TImer</a></div>
+            {/* Overlay with Link */}
+            <div className="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+              <Link href={work.link} passHref>
+                <span className="text-white text-lg font-bold hover:underline">
+                  {work.title}
+                </span>
+              </Link>
             </div>
-
-            <div className='  relative group'>
-                <Image src={work3} alt="work3"/>
-                <div className=' bg-[#000000bd] absolute w-[100%] h-[100%] top-0 opacity-0 transition duration-500 group-hover:opacity-100 grid place-items-center text-white'><a href="https://voice-inator-mamoon.netlify.app">Voice-Inator</a></div>
-            </div>
-
-            <div className=' relative group'>
-                <Image src={work4} alt="work4"/>
-                <div className=' bg-[#000000bd] absolute w-[100%] h-[100%] top-0 opacity-0 transition duration-500 group-hover:opacity-100 grid place-items-center text-white'><a href="https://remix-player.netlify.app">Music Player</a></div>
-            </div>
-
-            <div className=' relative group'>
-                <Image src={work5} alt="work5"/>
-                <div className=' bg-[#000000bd] absolute w-[100%] h-[100%] top-0 opacity-0 transition duration-500 group-hover:opacity-100 grid place-items-center text-white'><a href="https://clock02.netlify.app/">Wall Clock</a></div>
-            </div>
-
-            <div className=' relative group'>
-                <Image src={work6} alt="work6"/>
-                <div className=' bg-[#000000bd] absolute w-[100%] h-[100%] top-0 opacity-0 transition duration-500 group-hover:opacity-100 grid place-items-center text-white'><Link href="https://mole-game-mamoon.netlify.app/">Game</Link></div>
-            </div>
-        </div>
+          </div>
+        ))}
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Work
+export default Work;

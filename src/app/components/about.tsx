@@ -3,36 +3,43 @@ import Heading from "./heading";
 import bg from "@/app/images/mamoon.jpg";
 import Image from "next/image";
 import Button from "../button";
-import Link from "next/link";
 
 function About() {
   return (
-    <>
-    <section id="About" className="mx-auto py-8 px-4 ">
+    <section id="About" className="mx-auto py-8 px-4">
       <div className="ml-8">
-      <Heading title="About me" />
+        <Heading title="About Me" />
       </div>
-      
-      <div className=" flex flex-col justify-center items-center md:flex-row md:justify-around xl:flex-row xl:justify-around ">
-        <div className="">
-          <Image className=" w-[200px] md:w-[300px] xl:w-[300px]" src={bg} alt="my pic" />
+
+      <div className="flex flex-col md:flex-row md:justify-around gap-8">
+        {/* Image section */}
+        <div className="flex justify-center md:justify-start">
+          <Image
+            className="rounded-lg shadow-lg w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px]"
+            src={bg}
+            alt="Muhammad Mamoon"
+          />
         </div>
-        <div className="flex flex-col items-center "> 
-          <div className=" max-w-[550px] ml-8 mt-8">
-            <h1 className=" flex justify-center my-4 font-bold">Muhammad Mamoon</h1>
-            <p className=" text-slate-600 mr-6">I am a front-end developer and MIS officer at Artistic Millner, currently studying BSCS at Ilma University. I am also learning about blockchain through PIAIC. With a passion for creating visually appealing user interfaces, I aim to leverage blockchain technology&apos;s potential to revolutionize various industries. I have a strong foundation in web development and a dedication to continuous learning. Let&apos;s connect and collaborate to create impactful digital experiences.</p>
-          </div>
-         
-        
-          
-          <Button link="Contact" text="Contact Me"/>
-        
-          
-         
+
+        {/* Content section */}
+        <div className="flex flex-col items-center text-center md:items-start md:text-left max-w-[550px] md:ml-8 mt-8">
+          <h1 className="text-3xl font-bold my-4 text-black">Muhammad Mamoon</h1>
+          <p className="text-slate-700 text-lg leading-relaxed">
+            I am a MERN stack developer and SAP B1 consultant with expertise in
+            HTML5, CSS3, JavaScript, React.js, Next.js, Tailwind CSS, TypeScript,
+            Bootstrap, Node.js, Express.js, MongoDB, MySQL, PostgreSQL, and
+            Crystal Reports. With 3 years of experience as an MIS officer at
+            Artistic Milliners and currently working at Crown Group of Companies as
+            a SAP B1 consultant, I bring both technical skills and real-world business
+            experience to deliver dynamic, responsive websites and streamline
+            business processes. Let&apos;s connect and create impactful digital
+            solutions.
+          </p>
+
+          <Button link="#Contact" text="Contact Me" />
         </div>
       </div>
     </section>
-    </>
   );
 }
 
