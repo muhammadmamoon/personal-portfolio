@@ -10,12 +10,6 @@ import Work from './components/work'
 import styles from './page.module.css'
 
 export default function Home() {
-
-  // const [isopen,setisopen]= useState(false)
-
-  // const togglesidebar=()=>{
-  //    setisopen(!isopen)
-  // }
   return (
     <div>
     <main>
