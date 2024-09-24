@@ -42,8 +42,7 @@ function About() {
             Reports. With 3 years of experience as an MIS officer at Artistic Milliners
             and currently working at Crown Group of Companies as a SAP B1 consultant,
             I bring both technical skills and real-world business experience to deliver
-            dynamic, responsive websites and streamline business processes. Let&apos;s
-            connect and create impactful digital solutions.
+            dynamic, responsive websites and streamline business processes.Let&#39;s connect and create impactful digital solutions.            .
           </p>
 
           {/* Call-to-Action Button */}

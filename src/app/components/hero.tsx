@@ -27,7 +27,7 @@ function Hero() {
         <div className="text-white max-w-[550px] flex flex-col items-start gap-6 lg:ml-8 text-center lg:text-left">
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-red-500">
-            I&apos;M Muhammad Mamoon
+            I&#39;M Muhammad Mamoon
           </h1>
 
           {/* Typewriter Effect */}
@@ -56,7 +56,7 @@ function Hero() {
             responsive websites. With expertise in modern technologies like
             HTML5, CSS3, JavaScript, React.js, Next.js, Tailwind CSS, and 
             more, I ensure seamless user experiences and robust functionality. 
-            Let&apos;s collaborate to bring your digital vision and business solutions to life!
+            Let&#39;s collaborate to bring your digital vision and business solutions to life!
           </p>
 
           {/* Call to Action Button */}
