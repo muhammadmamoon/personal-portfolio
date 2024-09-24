@@ -49,9 +49,10 @@ const workData = [
     alt: 'Mole Game Project',
     link: 'https://mole-game-mamoon.netlify.app/',
     title: 'Game'
-  },{
+  },
+  {
     src: work7,
-    alt: 'IT Consultant &#39;Service Provider',
+    alt: 'IT Consultant Service Provider',
     link: 'https://iblaaqisol.vercel.app/',
     title: 'IBLAAQISOL'
   },
@@ -72,21 +73,22 @@ const Work = () => {
       {/* Work Gallery */}
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {workData.map((work, index) => (
-          <div key={index} className="relative group overflow-hidden rounded-lg shadow-lg">
+          <div key={index} className="relative group overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
             {/* Image */}
             <Image
               src={work.src}
               alt={work.alt}
-              className="transition-transform duration-500 transform group-hover:scale-105"
+              className="transition-transform duration-500 ease-in-out group-hover:scale-110"
               layout="responsive"
               objectFit="cover"
               quality={75}
+              loading="lazy"
             />
 
             {/* Overlay with Link */}
-            <div className="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+            <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <Link href={work.link} passHref>
-                <span className="text-white text-lg font-bold hover:underline">
+                <span className="text-white text-lg font-bold hover:underline transition-all duration-300 transform scale-105 group-hover:scale-110">
                   {work.title}
                 </span>
               </Link>

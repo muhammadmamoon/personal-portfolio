@@ -1,77 +1,37 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { BsDownload } from "react-icons/bs";
+import { BsDownload, BsGithub, BsInstagram, BsLinkedin, BsTwitter, BsWhatsapp } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
-import {
-  BsGithub,
-  BsInstagram,
-  BsLinkedin,
-  BsTwitter,
-  BsWhatsapp,
-} from "react-icons/bs";
 import Link from "next/link";
 
-interface navItem {
-  label: string;
-  page: string;
-  id: string;
-}
-
-const Nav_Items: Array<navItem> = [
-  {
-    label: "Home",
-    page: "home",
-    id: "Home",
-  },
-  {
-    label: "About",
-    page: "about",
-    id: "About",
-  },
-  {
-    label: "Project",
-    page: "project",
-    id: "Project",
-  },
-  {
-    label: "Skills",
-    page: "skills",
-    id: "Skills",
-  },
-  {
-    label: "Services",
-    page: "services",
-    id: "Services",
-  },
-  {
-    label: "Contact",
-    page: "contact",
-    id: "Contact",
-  },
+const Nav_Items = [
+  { label: "Home", page: "home", id: "Home" },
+  { label: "About", page: "about", id: "About" },
+  { label: "Project", page: "project", id: "Project" },
+  { label: "Skills", page: "skills", id: "Skills" },
+  { label: "Services", page: "services", id: "Services" },
+  { label: "Contact", page: "contact", id: "Contact" },
 ];
 
 const Navebar = () => {
-  const [nav, setnav] = useState(false);
+  const [nav, setNav] = useState(false);
   const [scrolling, setScrolling] = useState(false);
 
-  const handlenav = () => {
-    setnav(!nav);
+  const handleNav = () => {
+    setNav(!nav);
   };
 
-  const handleScroll = (id: string) => {
+  const handleScroll = (id:any) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      setNav(false); // Close the menu on item click
     }
   };
 
   const handleScrollEvent = () => {
-    if (window.scrollY > 50) {
-      setScrolling(true);
-    } else {
-      setScrolling(false);
-    }
+    setScrolling(window.scrollY > 50);
   };
 
   useEffect(() => {
@@ -80,11 +40,11 @@ const Navebar = () => {
   }, []);
 
   return (
-    <div className={`fixed top-0 w-full z-10 ${scrolling ? "bg-[rgba(255,255,255,0.5)] backdrop-blur-md" : "bg-white shadow-2xl"}`}>
+    <div className={`fixed top-0 w-full z-10 ${scrolling ? "bg-[rgba(255,255,255,0.9)] backdrop-blur-md" : "bg-white shadow-lg"}`}>
       <div className="flex items-center justify-between px-4 py-2">
         {/* Hamburger Menu for Small Devices */}
-        <div className={`md:hidden text-[24px] flex items-center py-2 ${scrolling ? "text-white" : ""}`}>
-          <FiMenu onClick={handlenav} />
+        <div className={`md:hidden text-[24px] flex items-center ${scrolling ? "text-gray-800" : "text-gray-600"}`}>
+          <FiMenu onClick={handleNav} />
         </div>
         
         {/* Navbar Items for Large Devices */}
@@ -92,9 +52,9 @@ const Navebar = () => {
           {Nav_Items.map((item, idx) => (
             <Link
               key={idx}
-              className="hover:bg-gray-800 hover:text-white px-4 py-2 rounded transition duration-200"
+              className={`hover:bg-gray-800 hover:text-white px-4 py-2 rounded transition duration-200 ${scrolling ? "text-gray-800" : "text-gray-600"}`}
               onClick={() => handleScroll(item.id)}
-              href={""}
+              href="#"
             >
               {item.label}
             </Link>
@@ -119,10 +79,7 @@ const Navebar = () => {
           }`}
         >
           <div className="w-full flex justify-end">
-            <div
-              onClick={handlenav}
-              className="cursor-pointer rounded-full shadow-lg"
-            >
+            <div onClick={handleNav} className="cursor-pointer rounded-full shadow-lg">
               <AiOutlineClose size={25} />
             </div>
           </div>
@@ -132,7 +89,7 @@ const Navebar = () => {
                 key={idx}
                 className="hover:bg-gray-800 hover:text-white px-4 py-2 rounded transition duration-200"
                 onClick={() => handleScroll(item.id)}
-                href={""}
+                href="#"
               >
                 {item.label}
               </Link>

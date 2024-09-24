@@ -1,12 +1,28 @@
-import Link from 'next/link'
-import React, { FC } from 'react'
 
-const Button:FC<{text:React.ReactNode,link:any}>=({text,link})=>{
-  return (
-    <section>
-    <Link href={link} className='  text-[#ff4d41] py-2 px-4 hover:bg-[#ff4d41] rounded inline-block mt-10 font-medium border border-[#ff4d41] hover:text-white hover: bg-transparent   transition duration-200'>{text}</Link>
-    </section>
-  )
+import React from 'react';
+
+interface ButtonProps {
+  link?: string; // Use optional chaining to allow for a link prop
+  text: React.ReactNode;
+  className?: string;
+  onClick?: () => void; // Add this line to accept onClick prop
 }
 
-export default Button
+const Button: React.FC<ButtonProps> = ({ link, text, className, onClick }) => {
+  return (
+    <button
+      onClick={onClick} // Use onClick here
+      className={className}
+    >
+      {link ? (
+        <a href={link} className="block w-full">
+          {text}
+        </a>
+      ) : (
+        text
+      )}
+    </button>
+  );
+};
+
+export default Button;

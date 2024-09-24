@@ -9,57 +9,72 @@ function Hero() {
   return (
     <section
       id="Home"
-      className="bg-black h-screen bg-cover bg-fixed border border-green-400 flex flex-col justify-center pt-[80px]" // Added padding to prevent the name from hiding behind the navbar
+      className="bg-gradient-to-b from-black via-gray-900 to-gray-800 min-h-[90vh] lg:min-h-[85vh] bg-fixed flex flex-col justify-center py-[80px] lg:py-0" // Adjusted height for large screens
     >
-      {/* main container */}
-      <div className="flex flex-col items-center gap-y-10 px-4 lg:flex-row lg:justify-around">
-        {/* image container */}
+      {/* Main Container */}
+      <div className="flex flex-col items-center gap-y-10 px-4 lg:flex-row lg:justify-around lg:mt-16"> {/* Added margin-top for large screens */}
+        
+        {/* Image container for small screens */}
         <div className="lg:hidden flex justify-center items-center mb-10">
-          {/* Image shown on top for small devices */}
           <Image
             src={mypic}
             alt="hero section pic"
-            className="border-2 border-red-700 rounded-full w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px]"
+            className="border-4 border-red-700 rounded-full shadow-lg w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] transition-transform duration-300 hover:scale-105"
           />
         </div>
 
-        {/* content container */}
-        <div className="text-white max-w-[550px] flex flex-col items-start gap-6 lg:ml-8">
-          <div className="text-center lg:text-left">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-              I&#39;M Muhammad Mamoon
-            </h1>
-            <div className="text-xl sm:text-2xl md:text-3xl mt-3">
-              <Typewriter
-                options={{
-                  strings: ["MERN Stack Developer", "Freelancer"],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-            </div>
+        {/* Content Container */}
+        <div className="text-white max-w-[550px] flex flex-col items-start gap-6 lg:ml-8 text-center lg:text-left">
+          {/* Main Heading */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-red-500">
+            I&apos;M Muhammad Mamoon
+          </h1>
+
+          {/* Typewriter Effect */}
+          <div className="text-lg sm:text-2xl md:text-3xl mt-3 font-medium text-gray-300">
+            <Typewriter
+              options={{
+                strings: [
+                  "MERN Stack Developer",
+                  "SAP B1 Consultant",
+                  "Crystal Report Developer",
+                  "Freelancer",
+                ],
+                autoStart: true,
+                loop: true,
+              }}
+            />
           </div>
-          <div className="bg-red-700 h-[4px] w-[40px]"></div>
-          <p className="sm:text-lg md:text-xl leading-relaxed">
+
+          {/* Decorative line */}
+          <div className="bg-red-500 h-[4px] w-[50px] mt-4 mx-auto lg:mx-0"></div>
+
+          {/* Paragraph with better spacing */}
+          <p className="sm:text-lg md:text-xl text-gray-300 leading-relaxed mt-4">
             As a MERN stack developer and SAP B1 consultant, I offer
             professional services to build dynamic, visually appealing, and
-            responsive websites. With expertise in HTML5, CSS3, JavaScript,
-            React.js, Next.js, Tailwind CSS, TypeScript, and Bootstrap, I ensure
-            seamless user experiences and robust functionality. Additionally, I
-            specialize in backend technologies like Node.js, Express.js, and
-            database management using MongoDB, MySQL, and PostgreSQL. Let&apos;s
-            collaborate to bring your digital vision and business solutions to
-            life!
+            responsive websites. With expertise in modern technologies like
+            HTML5, CSS3, JavaScript, React.js, Next.js, Tailwind CSS, and 
+            more, I ensure seamless user experiences and robust functionality. 
+            Let&apos;s collaborate to bring your digital vision and business solutions to life!
           </p>
-          <Button link="/about" text="learn more" />
+
+          {/* Call to Action Button */}
+          <div className="mt-6">
+            <Button
+              link="#About"
+              text="Learn More"
+            className="bg-gradient-to-r from-red-500 to-orange-400 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-105"
+            />
+          </div>
         </div>
 
-        {/* image container - shown after text on larger devices */}
+        {/* Image container for larger screens */}
         <div className="hidden lg:flex justify-center items-center">
           <Image
             src={mypic}
             alt="hero section pic"
-            className="border-2 border-red-700 rounded-full w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px]"
+            className="border-4 border-red-700 rounded-full shadow-lg w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] transition-transform duration-300 hover:scale-105"
           />
         </div>
       </div>

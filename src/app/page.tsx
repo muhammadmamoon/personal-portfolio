@@ -6,8 +6,9 @@ import Hero from './components/hero'
 import Navebar from './components/navebar'
 import Skills from './components/skills'
 import Whatido from './components/whatido'
+import WhatsAppButton from './components/whatsapp'
 import Work from './components/work'
-import styles from './page.module.css'
+
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
     <footer>
       <Footer/>
     </footer>
+    <WhatsAppButton />
     </div>
   )
 }

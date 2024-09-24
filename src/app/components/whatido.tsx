@@ -51,20 +51,20 @@ const whatIdoData: Array<Data> = [
 
 const Whatido = () => {
   return (
-    <section id='Services' className='mx-auto py-8 px-4'>
-      <div>
+    <section id='Services' className='mx-auto py-10 px-4 bg-gray-100'>
+      <div className='text-center mb-8'>
         <Heading title="What I Do" />
       </div>
 
-      <div className='flex flex-col items-center justify-center gap-8 md:flex-row md:flex-wrap md:gap-8'>
+      <div className='flex flex-col items-center justify-center gap-8 md:flex-row md:flex-wrap md:gap-6'>
         {whatIdoData.map((item, idx) => {
           return (
             <div
-              className='shadow-lg border border-cyan-700 flex w-[300px] flex-col py-6 px-8 bg-[#ff4D41] text-white hover:shadow-gray-500 hover:cursor-pointer'
+              className='transition-transform duration-300 ease-in-out transform hover:scale-105 shadow-lg border border-cyan-700 flex flex-col py-6 px-8 bg-[#ff4D41] text-white rounded-lg hover:shadow-2xl'
               key={idx}
             >
-              <div className='text-black text-xl mb-2'>{item.heading}</div>
-              <div>{item.description}</div>
+              <h3 className='text-xl font-semibold mb-2 text-center'>{item.heading}</h3>
+              <p className='text-sm text-gray-200'>{item.description}</p>
             </div>
           );
         })}
