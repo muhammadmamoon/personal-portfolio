@@ -36,8 +36,6 @@ function Hero() {
               options={{
                 strings: [
                   "MERN Stack Developer",
-                  "SAP B1 Consultant",
-                  "Crystal Report Developer",
                   "Freelancer",
                 ],
                 autoStart: true,
@@ -51,12 +49,7 @@ function Hero() {
 
           {/* Paragraph with better spacing */}
           <p className="sm:text-lg md:text-xl text-gray-300 leading-relaxed mt-4">
-            As a MERN stack developer and SAP B1 consultant, I offer
-            professional services to build dynamic, visually appealing, and
-            responsive websites. With expertise in modern technologies like
-            HTML5, CSS3, JavaScript, React.js, Next.js, Tailwind CSS, and 
-            more, I ensure seamless user experiences and robust functionality. 
-            Let&#39;s collaborate to bring your digital vision and business solutions to life!
+          As a MERN stack developer, I specialize in creating dynamic, visually stunning, and fully responsive websites. With expertise in cutting-edge technologies like HTML5, CSS3, JavaScript, React.js, Next.js, and Tailwind CSS, I deliver seamless user experiences and robust functionality. Let&#39;s work together to turn your digital vision into reality!
           </p>
 
           {/* Call to Action Button */}

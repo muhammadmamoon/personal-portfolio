@@ -36,13 +36,7 @@ function About() {
             Muhammad Mamoon
           </h1>
           <p className="text-slate-700 text-lg leading-relaxed mb-6">
-            I am a MERN stack developer and SAP B1 consultant with expertise in
-            HTML5, CSS3, JavaScript, React.js, Next.js, Tailwind CSS, TypeScript,
-            Bootstrap, Node.js, Express.js, MongoDB, MySQL, PostgreSQL, and Crystal
-            Reports. With 3 years of experience as an MIS officer at Artistic Milliners
-            and currently working at Crown Group of Companies as a SAP B1 consultant,
-            I bring both technical skills and real-world business experience to deliver
-            dynamic, responsive websites and streamline business processes. Let&#39;s connect and create impactful digital solutions.
+          I am a skilled MERN stack developer with expertise in HTML5, CSS3, JavaScript, React.js, Next.js, Tailwind CSS, TypeScript, Bootstrap, Node.js, Express.js, MongoDB, MySQL, and PostgreSQL. At IBLAAQISOL, I’ve honed my ability to build dynamic and responsive websites, leveraging both my technical knowledge and practical experience to streamline digital solutions. Let&#39;s connect and work together to create innovative and impactful digital experiences.
           </p>
 
           {/* Call-to-Action Button */}
